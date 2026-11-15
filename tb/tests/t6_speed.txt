@@ -1,0 +1,9 @@
+# T6: CHIP-8 speed. 3072 loop iterations, then TIME left -> BCD at 0300, STOP.
+rom ../ref/chipos/Dream6800Rom.bin
+reset
+run 20
+poke 0200 60 FF F0 15 61 00 62 00 71 01 31 00 12 08 72 01 32 0C 12 08 F3 07 A3 00 F3 33 F0 00
+keys C000*3
+run 600
+mem 0300 3
+dump T6 end

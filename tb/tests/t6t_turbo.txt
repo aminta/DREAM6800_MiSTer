@@ -1,0 +1,10 @@
+# T6t: as T6 with Speed Turbo (no DMA halt): the loop must take ~59 % of the time
+rom ../ref/chipos/Dream6800Rom.bin
+reset
+turbo 1
+run 20
+poke 0200 60 FF F0 15 61 00 62 00 71 01 31 00 12 08 72 01 32 0C 12 08 F3 07 A3 00 F3 33 F0 00
+keys C000*3
+run 600
+mem 0300 3
+dump T6 end

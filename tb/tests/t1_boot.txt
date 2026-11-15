@@ -1,0 +1,14 @@
+# T1 boot screen, T2 address entry + bleep, T7 RTC
+rom ../ref/chipos/Dream6800Rom.bin
+reset
+run 50
+dump T1 boot
+mem 0020 1
+run 50
+mem 0020 1
+hold C 1
+run 1
+stats
+keytime 3 6
+keys 000
+dump T2 C000

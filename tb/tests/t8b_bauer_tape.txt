@@ -1,0 +1,11 @@
+# T8b: load Bauer's original Dream Invaders tape (MP3 -> 8-bit 48 kHz) at 0200-06FF
+rom ../ref/chipos/Dream6800Rom.bin
+reset
+run 20
+keys 0002*002000700
+reset
+run 10
+keys *1
+tapein out/inv_tape.raw
+run 2600
+mem 0200 1280

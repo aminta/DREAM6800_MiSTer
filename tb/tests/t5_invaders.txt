@@ -1,0 +1,15 @@
+# T5: Dream Invaders (machine code 0200-06FF, run 0200)
+rom ../ref/chipos/Dream6800Rom.bin
+reset
+run 20
+load 0200 ../ref/invaders/invaders_code.bin
+keys 0200*3
+run 100
+dump T5 +100
+run 200
+dump T5 +300
+hold 3 2
+run 10
+dump T5 fire
+hold 0 40
+dump T5 left

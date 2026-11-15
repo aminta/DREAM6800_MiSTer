@@ -1,0 +1,7 @@
+set_global_assignment -name VHDL_FILE rtl/cpu68.vhd
+set_global_assignment -name VHDL_FILE rtl/pia6821.vhd
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/dream6800.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/d6800_input.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/d6800_desk.sv
+set_global_assignment -name SDC_FILE DREAM6800.sdc
+set_global_assignment -name SYSTEMVERILOG_FILE DREAM6800.sv

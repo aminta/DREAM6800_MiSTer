@@ -1,0 +1,19 @@
+# T10: Bauer's joystick (DREAMER 3): service routine + test program; VC/VD at 003C/003D
+rom ../ref/chipos/Dream6800Rom.bin
+reset
+run 20
+load 0200 ../ref/dreamer/progs/Joystick_Test.c8
+keys C000*3
+stick 0 0
+run 30
+mem 003C 2
+stick 255 255
+run 30
+mem 003C 2
+stick 128 128
+run 30
+mem 003C 2
+dump centre
+stick 64 192
+run 30
+mem 003C 2

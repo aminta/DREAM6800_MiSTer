@@ -1,0 +1,13 @@
+# T3: F000 at 0200 entered with FN 0, run with C000 FN 3: screen cleared, back to monitor
+rom ../ref/chipos/Dream6800Rom.bin
+reset
+run 20
+keys 0200*0F000
+hold * 3
+run 6
+keys 0200
+dump T3 after memod
+mem 0200 2
+keys C000*3
+run 30
+dump T3 after run

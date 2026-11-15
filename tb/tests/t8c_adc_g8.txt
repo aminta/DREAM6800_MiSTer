@@ -1,0 +1,11 @@
+# T8c: Bauer's Invaders tape through the MiSTer ADC model (ltc2308_tape), gain 8
+rom ../ref/chipos/Dream6800Rom.bin
+reset
+run 20
+keys 0002*002000700
+reset
+run 10
+keys *1
+tapeadc out/inv_tape.raw 8
+run 2600
+mem 0200 1280
