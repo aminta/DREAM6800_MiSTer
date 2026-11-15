@@ -64,7 +64,9 @@ come la [re-creation di Digicool Things](https://digicoolthings.com/dream-6800-6
 
 ### Installazione
 
-1. Copiare `releases/DREAM6800_<data>.rbf` in `/media/fat/_Computer/` sulla SD del MiSTer.
+1. Copiare `releases/DREAM6800_<data>.rbf` in `/media/fat/_Computer/` sulla SD del MiSTer, oppure aggiungere il
+   database [aminta/MiSTer_aminta_db](https://github.com/aminta/MiSTer_aminta_db) (`.ini` pronto o due righe in
+   `downloader.ini`, vedi il suo README): *update* e *update_all* installano e aggiornano il core.
 2. Serve **CHIPOS** come `boot.rom`: scaricare `Dream6800_CHIPOS_code.zip` dalla
    [pagina del DREAM 6800 di Michael Bauer](https://www.mjbauer.biz/DREAM6800.htm), prendere
    l'immagine della ROM da 1 KB (CRC32 `3f97ca2e`, la stessa di `d6800.bin` di MAME) e salvarla come

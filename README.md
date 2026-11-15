@@ -62,7 +62,9 @@ are being built today.
 
 ### Installing
 
-1. Copy `releases/DREAM6800_<date>.rbf` to `/media/fat/_Computer/` on the MiSTer SD card.
+1. Copy `releases/DREAM6800_<date>.rbf` to `/media/fat/_Computer/` on the MiSTer SD card, or add the database
+   [aminta/MiSTer_aminta_db](https://github.com/aminta/MiSTer_aminta_db) (drop-in `.ini` or two lines in
+   `downloader.ini`, see its README): *update* and *update_all* then install and update the core.
 2. **CHIPOS** is needed as `boot.rom`: download `Dream6800_CHIPOS_code.zip` from
    [Michael Bauer's DREAM 6800 page](https://www.mjbauer.biz/DREAM6800.htm), take the 1 KB ROM image
    (CRC32 `3f97ca2e`, the same as MAME's `d6800.bin`) and save it as
