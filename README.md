@@ -65,10 +65,9 @@ are being built today.
 1. Copy `releases/DREAM6800_<date>.rbf` to `/media/fat/_Computer/` on the MiSTer SD card, or add the database
    [aminta/MiSTer_aminta_db](https://github.com/aminta/MiSTer_aminta_db) (drop-in `.ini` or two lines in
    `downloader.ini`, see its README): *update* and *update_all* then install and update the core.
-2. **CHIPOS** is needed as `boot.rom`: download `Dream6800_CHIPOS_code.zip` from
-   [Michael Bauer's DREAM 6800 page](https://www.mjbauer.biz/DREAM6800.htm), take the 1 KB ROM image
-   (CRC32 `3f97ca2e`, the same as MAME's `d6800.bin`) and save it as
-   `/media/fat/games/DREAM6800/boot.rom`.
+2. **CHIPOS is built in**, with Michael Bauer's permission: nothing else to install. A
+   `/media/fat/games/DREAM6800/boot.rom` (1 KB), if present, replaces it, e.g. to try a modified
+   monitor; the original is CRC32 `3f97ca2e`, the same as MAME's `d6800.bin`.
 3. Put your programs in `/media/fat/games/DREAM6800/` (any sub-folder). Bauer's own programs are
    on the same page as audio recordings (`dream6800_programs_mp3.zip`): `tools/tape2bin.py`
    turns them into files the core loads (see *Programs from tape* below), or play them into the
@@ -201,8 +200,9 @@ Mouse pointer from the PLATO core. Core: aminta, with Claude (Anthropic).
 
 ## License
 
-GPL-2.0, like the MiSTer framework in `sys/` and the CPU and PIA cores. CHIPOS and the DREAM programs
-are Michael Bauer's work and are not included.
+GPL-2.0, like the MiSTer framework in `sys/` and the CPU and PIA cores. CHIPOS (`rtl/chipos.hex`) is
+Michael Bauer's work: in November 2026 he placed the DREAM 6800 material in the public domain and gave
+permission to include CHIPOS in this core. Thank you, Michael!
 
 ## Fonts
 

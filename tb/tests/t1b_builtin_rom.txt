@@ -1,0 +1,13 @@
+# T1b: same as T1 without the rom command: CHIPOS comes from the built-in ROM (rtl/chipos.hex)
+reset
+run 50
+dump T1 boot
+mem 0020 1
+run 50
+mem 0020 1
+hold C 1
+run 1
+stats
+keytime 3 6
+keys 000
+dump T2 C000

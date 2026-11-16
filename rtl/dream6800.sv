@@ -7,7 +7,8 @@
 // clock enable (hold = ~ce_cpu), as in the Williams sound boards.
 
 module dream6800 #(
-    parameter int CPU_DIV = 40            // clk / 1 MHz  (40 MHz on MiSTer)
+    parameter int CPU_DIV = 40,           // clk / 1 MHz  (40 MHz on MiSTer)
+    parameter     ROM_FILE = "rtl/chipos.hex"   // CHIPOS, built in (Michael Bauer's permission, 2026-11-16)
 ) (
     input  logic        clk,
     input  logic        reset,            // RST key or core reset (active high)
@@ -88,6 +89,7 @@ module dream6800 #(
 
     // ------------------------------------------------------------------ memory
     logic [7:0] rom [0:1023];
+    initial $readmemh(ROM_FILE, rom);   // a boot.rom on the SD (index 0) still overwrites it
     logic [7:0] ram [0:4095];
     logic [7:0] rom_q, ram_q;
 

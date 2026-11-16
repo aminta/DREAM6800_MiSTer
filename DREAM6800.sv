@@ -114,7 +114,7 @@ pll pll
 );
 
 // ---------------------------------------------------------------- loading
-// index 0 = boot.rom (CHIPOS, loaded by the MiSTer at start-up)
+// index 0 = boot.rom: optional, replaces the built-in CHIPOS (loaded by the MiSTer at start-up)
 // index 1 = program, written with the CPU held in RST; then CHIPOS starts normally
 //           and the autotype keys in the run address and FN 3, like a user would:
 //           .c8/.ch8  CHIP-8 from 0200, run C000

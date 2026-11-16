@@ -36,6 +36,8 @@ if want('t1'):
     fh, fm = frames(h), frames(m)
     check('T1 boot screen = MAME', fh[0] == fm[0])
     check('T2 address C000 = MAME', fh[1] == fm[1])
+    b = frames(run('./d6800_tb', 'tests/t1b_builtin_rom.txt'))
+    check('T1b built-in CHIPOS (no boot.rom): boot screen = MAME', b[0] == fm[0])
     t = [d[0] for a, d in mems(h)]
     check('T7 RTC 50 Hz', (t[0] - t[1]) & 255 == 50, f'TIME {t[0]:02X} -> {t[1]:02X} in 50 frames')
     s = stats(h)[0]

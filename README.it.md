@@ -67,10 +67,9 @@ come la [re-creation di Digicool Things](https://digicoolthings.com/dream-6800-6
 1. Copiare `releases/DREAM6800_<data>.rbf` in `/media/fat/_Computer/` sulla SD del MiSTer, oppure aggiungere il
    database [aminta/MiSTer_aminta_db](https://github.com/aminta/MiSTer_aminta_db) (`.ini` pronto o due righe in
    `downloader.ini`, vedi il suo README): *update* e *update_all* installano e aggiornano il core.
-2. Serve **CHIPOS** come `boot.rom`: scaricare `Dream6800_CHIPOS_code.zip` dalla
-   [pagina del DREAM 6800 di Michael Bauer](https://www.mjbauer.biz/DREAM6800.htm), prendere
-   l'immagine della ROM da 1 KB (CRC32 `3f97ca2e`, la stessa di `d6800.bin` di MAME) e salvarla come
-   `/media/fat/games/DREAM6800/boot.rom`.
+2. **CHIPOS è già dentro il core**, con il permesso di Michael Bauer: non serve altro. Un file
+   `/media/fat/games/DREAM6800/boot.rom` (1 KB), se c'è, lo sostituisce, per esempio per provare un
+   monitor modificato; l'originale ha CRC32 `3f97ca2e`, lo stesso di `d6800.bin` di MAME.
 3. Mettere i programmi in `/media/fat/games/DREAM6800/` (anche in sottocartelle). I programmi di
    Bauer sono sulla stessa pagina come registrazioni audio (`dream6800_programs_mp3.zip`):
    `tools/tape2bin.py` li trasforma in file che il core carica (vedi *Programmi da cassetta*), oppure
@@ -204,8 +203,9 @@ Puntatore del mouse dal core PLATO. Core: aminta, con Claude (Anthropic).
 
 ## Licenza
 
-GPL-2.0, come il framework MiSTer in `sys/` e i core di CPU e PIA. CHIPOS e i programmi del DREAM
-sono opera di Michael Bauer e non sono inclusi.
+GPL-2.0, come il framework MiSTer in `sys/` e i core di CPU e PIA. CHIPOS (`rtl/chipos.hex`) è opera
+di Michael Bauer: a novembre 2026 ha dichiarato di pubblico dominio il materiale del DREAM 6800 e ha
+dato il permesso di includere CHIPOS in questo core. Grazie, Michael!
 
 ## Font
 

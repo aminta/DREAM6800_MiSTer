@@ -1,7 +1,7 @@
 # DREAM 6800 Verilator testbench
 VFLAGS = --cc --exe --build -O3 --x-assign fast --x-initial fast -Wno-fatal -Wno-lint -Wno-style \
          -MAKEFLAGS "OPT_FAST=-O2 -j8" \
-         -GCPU_DIV=4 --top-module dream6800 -Mdir obj_dir -o ../d6800_tb
+         -GCPU_DIV=4 -GROM_FILE='"../rtl/chipos.hex"' --top-module dream6800 -Mdir obj_dir -o ../d6800_tb
 SRC = ../sim/gen/cpu68.v ../sim/gen/pia6821.v ../rtl/dream6800.sv
 
 d6800_tb: $(SRC) tb.cpp
