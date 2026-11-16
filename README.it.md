@@ -70,8 +70,9 @@ come la [re-creation di Digicool Things](https://digicoolthings.com/dream-6800-6
 2. **CHIPOS è già dentro il core**, con il permesso di Michael Bauer: non serve altro. Un file
    `/media/fat/games/DREAM6800/boot.rom` (1 KB), se c'è, lo sostituisce, per esempio per provare un
    monitor modificato; l'originale ha CRC32 `3f97ca2e`, lo stesso di `d6800.bin` di MAME.
-3. Mettere i programmi in `/media/fat/games/DREAM6800/` (anche in sottocartelle). I programmi di
-   Bauer sono sulla stessa pagina come registrazioni audio (`dream6800_programs_mp3.zip`):
+3. Mettere i programmi in `/media/fat/games/DREAM6800/` (anche in sottocartelle). I programmi della
+   cassetta di Bauer (quattro sono giochi di Joseph Weisbecker, adattati con il suo permesso) sono
+   sulla stessa pagina come registrazioni audio (`dream6800_programs_mp3.zip`):
    `tools/tape2bin.py` li trasforma in file che il core carica (vedi *Programmi da cassetta*), oppure
    si possono suonare nell'ingresso audio del MiSTer.
 

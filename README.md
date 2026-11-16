@@ -68,8 +68,9 @@ are being built today.
 2. **CHIPOS is built in**, with Michael Bauer's permission: nothing else to install. A
    `/media/fat/games/DREAM6800/boot.rom` (1 KB), if present, replaces it, e.g. to try a modified
    monitor; the original is CRC32 `3f97ca2e`, the same as MAME's `d6800.bin`.
-3. Put your programs in `/media/fat/games/DREAM6800/` (any sub-folder). Bauer's own programs are
-   on the same page as audio recordings (`dream6800_programs_mp3.zip`): `tools/tape2bin.py`
+3. Put your programs in `/media/fat/games/DREAM6800/` (any sub-folder). The programs from Bauer's
+   cassette (four of them games by Joseph Weisbecker, adapted with his permission) are on the same
+   page as audio recordings (`dream6800_programs_mp3.zip`): `tools/tape2bin.py`
    turns them into files the core loads (see *Programs from tape* below), or play them into the
    MiSTer's audio input.
 
